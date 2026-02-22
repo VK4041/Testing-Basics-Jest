@@ -1,0 +1,64 @@
+{
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.0",
+    "jest": "^30.2.0"
+  },
+  "name": "testing-basics-jest",
+  "version": "1.0.0",
+  "description": "Learning the basics of TDD using Jest testing framework",
+  "main": "babel.config.js",
+  "dependencies": {
+    "babel-plugin-polyfill-corejs2": "^0.4.15",
+    "babel-plugin-polyfill-corejs3": "^0.14.0",
+    "babel-plugin-polyfill-regenerator": "^0.6.6",
+    "baseline-browser-mapping": "^2.10.0",
+    "browserslist": "^4.28.1",
+    "caniuse-lite": "^1.0.30001770",
+    "convert-source-map": "^2.0.0",
+    "core-js-compat": "^3.48.0",
+    "debug": "^4.4.3",
+    "electron-to-chromium": "^1.5.302",
+    "escalade": "^3.2.0",
+    "esutils": "^2.0.3",
+    "function-bind": "^1.1.2",
+    "gensync": "^1.0.0-beta.2",
+    "hasown": "^2.0.2",
+    "is-core-module": "^2.16.1",
+    "js-tokens": "^4.0.0",
+    "jsesc": "^3.1.0",
+    "json5": "^2.2.3",
+    "lodash.debounce": "^4.0.8",
+    "lru-cache": "^5.1.1",
+    "ms": "^2.1.3",
+    "node-releases": "^2.0.27",
+    "path-parse": "^1.0.7",
+    "picocolors": "^1.1.1",
+    "regenerate": "^1.4.2",
+    "regenerate-unicode-properties": "^10.2.2",
+    "regexpu-core": "^6.4.0",
+    "regjsgen": "^0.8.0",
+    "regjsparser": "^0.13.0",
+    "resolve": "^1.22.11",
+    "semver": "^6.3.1",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "unicode-canonical-property-names-ecmascript": "^2.0.1",
+    "unicode-match-property-ecmascript": "^2.0.0",
+    "unicode-match-property-value-ecmascript": "^2.2.1",
+    "unicode-property-aliases-ecmascript": "^2.2.0",
+    "update-browserslist-db": "^1.2.3",
+    "yallist": "^3.1.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VK4041/Testing-Basics-Jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VK4041/Testing-Basics-Jest/issues"
+  },
+  "homepage": "https://github.com/VK4041/Testing-Basics-Jest#readme"
+}
