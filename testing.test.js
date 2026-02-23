@@ -61,3 +61,31 @@ describe("Caesar Cipher", () => {
     );
   });
 });
+
+describe("Analyse Array", () => {
+  test("Analyse Empty array", () => {
+    expect(testFunctions.analyseArray([])).toEqual({});
+  });
+  test("Analyse Singleton array", () => {
+    const randomInt = Math.floor(Math.random() * 100);
+    expect(testFunctions.analyseArray([randomInt])).toEqual({
+      average: randomInt,
+      min: randomInt,
+      max: randomInt,
+      length: 1,
+    });
+  });
+  test("Analyse integer array", () => {
+    let testArray = [1, 2, 3, 4, 5, 6];
+    let expMin = Math.min(...testArray);
+    let expMax = Math.max(...testArray);
+    let expLength = testArray.length;
+    let expAvg = testArray.reduce((sum, val) => sum + val) / expLength;
+    expect(testFunctions.analyseArray(testArray)).toEqual({
+      average: expAvg,
+      min: expMin,
+      max: expMax,
+      length: expLength,
+    });
+  });
+});

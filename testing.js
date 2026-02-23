@@ -46,9 +46,27 @@ const caesarCipher = (string, shift) => {
   }
   return newStr;
 };
+
+const analyseArray = (array) => {
+  if (!array.length) return {};
+  if (array.length === 1)
+    return {
+      average: array[0],
+      min: array[0],
+      max: array[0],
+      length: 1,
+    };
+  return {
+    length: array.length,
+    min: Math.min(...array),
+    max: Math.max(...array),
+    average: array.reduce((sum, val) => sum + val) / array.length,
+  };
+};
 export default testFunctions = {
   capitalize,
   reverseString,
   calculator,
   caesarCipher,
+  analyseArray,
 };
