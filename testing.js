@@ -8,7 +8,47 @@ const reverseString = (string) => {
     })
     .join("");
 };
+const calculator = {
+  add: (a, b) => a + b,
+  subtract: (a, b) => a - b,
+  multiply: (a, b) => a * b,
+  divide: (a, b) => (b === 0 ? undefined : a / b),
+};
+
+const caesarCipher = (string, shift) => {
+  shift %= 26;
+  let newStr = "";
+  if (!shift) return string;
+  for (const char of string) {
+    let tempChar = char;
+    //Only cipher the alphabets
+    if (/[a-zA-Z]/.test(char)) {
+      let start;
+      let end;
+      if (/[a-z]/.test(char)) {
+        start = 97;
+        end = 122;
+      } else {
+        start = 65;
+        end = 90;
+      }
+      let shiftedCode = char.charCodeAt() + shift;
+      shiftedCode =
+        shiftedCode > end
+          ? (shiftedCode % end) + start - 1 //1 less because start from first charCode
+          : shiftedCode < start
+            ? shiftedCode + 26
+            : shiftedCode;
+      tempChar = String.fromCharCode(shiftedCode);
+    }
+    //Concat together into newStr
+    newStr = newStr.concat(tempChar);
+  }
+  return newStr;
+};
 export default testFunctions = {
   capitalize,
   reverseString,
+  calculator,
+  caesarCipher,
 };
